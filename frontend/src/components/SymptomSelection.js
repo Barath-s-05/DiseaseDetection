@@ -15,7 +15,7 @@ const SymptomSelection = () => {
   useEffect(() => {
     const fetchSymptoms = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/symptoms');
+        const response = await axios.get('https://diseasedetection-p5y5.onrender.com/symptoms');
         setSymptoms(response.data.symptoms);
       } catch {
         setSymptoms([
@@ -49,7 +49,7 @@ const SymptomSelection = () => {
 
     setLoading(true);
     try {
-      const response = await axios.post('http://localhost:8000/predict', {
+      const response = await axios.post('https://diseasedetection-p5y5.onrender.com/predict', {
         symptoms: selectedSymptoms,
         age: parseInt(age) || 25,
         gender,
