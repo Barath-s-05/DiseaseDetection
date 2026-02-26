@@ -1,0 +1,152 @@
+/* ===== Base Layout ===== */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #e0f2fe 0%, #f8fafc 100%);
+}
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* ===== Page Wrapper (Centers White Box) ===== */
+.page-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;   /* key fix: stop vertical stretching */
+  padding: 40px 15px;
+}
+
+
+/* ===== Card (White Box Container) ===== */
+.card {
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 28px 32px;
+  width: 100%;
+  max-width: 820px;
+}
+
+
+/* ===== Headings ===== */
+h1, h2, h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* ===== Paragraph Text ===== */
+p {
+  line-height: 1.6;
+  color: #555;
+}
+
+/* ===== Inputs ===== */
+input, select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ===== Buttons ===== */
+button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ===== Symptom Grid (5 Per Row) ===== */
+.symptom-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-top: 15px;
+}
+
+/* Symptom Buttons */
+.symptom-btn {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #f9fafb;
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+}
+
+.symptom-btn:hover {
+  background: #eef2ff;
+}
+
+.symptom-btn.selected {
+  background: #dbeafe;
+  border-color: #2563eb;
+  color: #1e40af;
+  font-weight: bold;
+}
+
+/* ===== Selected Symptom Tags ===== */
+.tag {
+  background: #dbeafe;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  margin: 5px;
+  display: inline-block;
+}
+
+/* ===== Probability Bars (Results Page) ===== */
+.probability-bar {
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.probability-fill {
+  height: 100%;
+  background: #2563eb;
+  transition: width 0.4s ease;
+}
+
+/* ===== Disclaimer Box ===== */
+.disclaimer-box {
+  background: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  padding: 16px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* ===== Utility Classes ===== */
+.row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.center {
+  text-align: center;
+}
